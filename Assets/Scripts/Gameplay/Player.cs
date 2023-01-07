@@ -33,7 +33,7 @@ public class Player : MonoBehaviour {
             
 
             //_movingDir = _movingDir.normalized;//direction is normalized by the raycast, this line is redundant 
-            RaycastHit2D hit = Physics2D.CircleCast(this.transform.position, 1f, _movingDir,2f);
+            RaycastHit2D hit = Physics2D.CircleCast(this.transform.position, 2f, _movingDir,2f);
             
             if (hit.transform.TryGetComponent(out InteractableObject interactableObject)) {
                 interactableObject.InteractWithThis();
