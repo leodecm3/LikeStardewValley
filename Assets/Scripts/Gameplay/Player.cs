@@ -9,9 +9,11 @@ public class Player : MonoBehaviour {
     [SerializeField][Range(1f,20f)] private float velocity = 5f;
     private Vector3 _movingDir;
     private Rigidbody2D _rigidbody;
+
+    private GameObject closerInteractable = null;
+    public void SetCloserInteractable(GameObject g) => closerInteractable = g;
+
     
-
-
     private void Start() {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -26,6 +28,22 @@ public class Player : MonoBehaviour {
     }
 
 
-    
-    
+
+    public void OnInteract(InputAction.CallbackContext context) {
+        
+        if (context.started) {
+
+            if (closerInteractable != null) {
+                //closerInteractable.
+            }
+            
+            Debug.Log("started ");
+            
+        }
+
+    }
+
+
+
+
 }

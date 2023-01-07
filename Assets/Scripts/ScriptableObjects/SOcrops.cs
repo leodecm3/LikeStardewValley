@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(menuName = "ScriptableObjects/SOcrops")]
-public class SOcrops : ScriptableObjects {
+public class SOcrops : SOobject {
 
     public float timeToGrow;
     public float timerNow;

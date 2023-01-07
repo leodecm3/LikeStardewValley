@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(menuName = "ScriptableObjects/SOclothes")]
-public class SOclothes : ScriptableObjects
+public class SOclothes : SOobject
 {
 
     

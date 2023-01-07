@@ -9,6 +9,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     private Player _player;
+
+    [SerializeField] private float playersMoney;
+    public float GetPlayersMoney() =>  playersMoney;
+    
+    
     
     
     //SINGLETON... use like this:   _gm = GameManager.Instance;
@@ -18,11 +23,26 @@ public class GameManager : MonoBehaviour {
             Destroy(Instance.gameObject);
         Instance = this;
     }
-
-
+    
     private void Start() {
         _player = FindObjectOfType<Player>();
     }
+
+
+
+    
+    public float AddPlayersMoney(float amount) {
+        playersMoney += amount;
+        return playersMoney;
+    }
+    
+
+
+    [ContextMenu("TestMoney function")]
+    public void TestMoney() {
+        playersMoney += 10f;
+    }
+    
 
 
 

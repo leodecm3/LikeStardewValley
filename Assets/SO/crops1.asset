@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a30d81cfb818b4896a95eeb74d332f, type: 3}
   m_Name: crops1
   m_EditorClassIdentifier: 
-  buyPrice: 0
-  sellPrice: 0
-  sprite: {fileID: 0}
-  timeToGrow: 0
+  baseBuyPrice: 1
+  baseSellPrice: 1
+  sprite: {fileID: 943831494, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
+  timeToGrow: 5
   timerNow: 0
-  growingSprite: []
+  growingSprite:
+  - {fileID: 1294865883, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
+  - {fileID: -1988286786, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
+  - {fileID: 1216150679, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
+  - {fileID: -292895234, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
