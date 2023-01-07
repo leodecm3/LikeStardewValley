@@ -1706,7 +1706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xNotEnoughMoney: {fileID: 1456820359}
-  price: {fileID: 1456820361}
+  price: {fileID: 1602882852}
   image: {fileID: 1830747543}
   totalPrice: 1
   qtd: 1
@@ -1754,7 +1754,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 363589321}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 363589319}
+        m_TargetAssemblyTypeName: BuyButton, Assembly-CSharp
+        m_MethodName: OnBuyThis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &363589321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2388,13 +2400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64488ccc9a0847709cf0750b91383787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTriggerEnter2DEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onTriggerExit2DEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onTriggerStay2DEvent:
+  onTriggerEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &540034350
@@ -32072,6 +32078,7 @@ MonoBehaviour:
   visionCone: {fileID: 526254548}
   interactionLabel: {fileID: 196151120}
   cinemachineVirtualCamera: {fileID: 854949725}
+  npcCanvas: {fileID: 2080542525}
 --- !u!1 &1024362062
 GameObject:
   m_ObjectHideFlags: 0
@@ -36918,7 +36925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2080542526
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37153,7 +37160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92fd1d8190b59e44b9b25bfc3d38b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersMoney: 0
+  playersMoney: 1
+  inventory: []
+  moneyUI: {fileID: 1453922543}
 --- !u!4 &2103798921
 Transform:
   m_ObjectHideFlags: 0

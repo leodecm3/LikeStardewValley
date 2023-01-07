@@ -2,13 +2,18 @@
 using Cinemachine;
 using UnityEngine;
 
-public class Npc : MonoBehaviour {
+public class Npc : InteractableObject {
 
     [SerializeField] private TriggerEvents visionCone;
     [SerializeField] private GameObject interactionLabel;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
-    
-    
+    [SerializeField] private GameObject npcCanvas;
+
+    private void Start() {
+        //just in case i forget...
+        npcCanvas.SetActive(false);
+    }
+
     void OnEnable()
     {
         visionCone.onTriggerEvent.AddListener(VisionConeColliderTrigger);
@@ -27,24 +32,25 @@ public class Npc : MonoBehaviour {
             case TriggerEnum.Enter:
                 interactionLabel.SetActive(true);
                 cinemachineVirtualCamera.Priority = 11;
-                
-                //tell the player that there is a interactable near
-                player.SetCloserInteractable(this.gameObject);
-                
                 break;
             case TriggerEnum.Exit:
                 interactionLabel.SetActive(false);
+                npcCanvas.SetActive(false);
                 cinemachineVirtualCamera.Priority = 0;
-                
-                player.SetCloserInteractable(null);
-                
                 break;
             }
         }
     }
     
     
-
-
+    
+    //Class common to any  InteractableObject
+    public override void InteractWithThis() {
+        
+        interactionLabel.SetActive(false);
+        npcCanvas.SetActive(true);
+        
+        
+    }
 }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,11 +15,9 @@ public class BuyButton : MonoBehaviour {
     [SerializeField] private SOobject so;
     
     private GameManager _gm;
-    
-    
-    private void Start() {
+
+    private void Awake() {
         _gm = GameManager.Instance;
-        UpdateUI();
     }
 
     private void OnEnable() {
@@ -37,9 +36,13 @@ public class BuyButton : MonoBehaviour {
 
     public void OnBuyThis() {
 
+        if (_gm.BuySomething(so,totalPrice,qtd) == false) {
+            //case cant buy, i do an simple animation
+            xNotEnoughMoney.transform.localScale = new Vector2(2f, 2f);
+            xNotEnoughMoney.transform.DOScale(1f,0.5f);
+            
+        }
         
-
-
         UpdateUI();
     }
     
