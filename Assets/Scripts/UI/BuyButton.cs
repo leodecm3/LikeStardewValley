@@ -37,8 +37,10 @@ public class BuyButton : MonoBehaviour {
     public void OnBuyThis() {
 
         if (_gm.BuySomething(so,totalPrice,qtd) == false) {
-            //case cant buy, i do an simple animation
+            
+            //case cant buy, i do an simple animation using dotween
             xNotEnoughMoney.transform.localScale = new Vector2(2f, 2f);
+            xNotEnoughMoney.transform.DOKill(false);
             xNotEnoughMoney.transform.DOScale(1f,0.5f);
             
         }
