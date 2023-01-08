@@ -1,6 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,10 +9,12 @@ using UnityEngine.UI;
 [DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour {
     
-    [SerializeField] private List<SOobject> inventory = new List<SOobject>();
-    
     [SerializeField] private TextMeshProUGUI moneyUI;
-    [SerializeField] private List<Image> inventoryImages= new List<Image>();
+    [SerializeField] private List<InventoryButton> inventoryUI= new List<InventoryButton>();
+    
+    //I normally use ODIN to visualize dictionaries on the editor...  [SerializeField] 
+    [SerializeField] private Dictionary<SOobject,int> _dicInv= new Dictionary<SOobject,int>();
+    
     
     
     [SerializeField] private float playersMoney;
@@ -56,34 +57,44 @@ public class GameManager : MonoBehaviour {
         if (price > playersMoney) {
             return false;
         }
-        for (int i = 0; i < qtd; i++) {
-            inventory.Add(sOobject.Clone());
-            AddPlayersMoney(-price);
+
+        //add one to the dictionary
+        if (_dicInv.ContainsKey(sOobject) == false) {
+            _dicInv.Add(sOobject,0);
         }
+        _dicInv[sOobject] = _dicInv[sOobject] + qtd;
+        
+        AddPlayersMoney(-price);
+        
         UpdateUIInventory();
         return true;
     }
 
+    
 
-
-
-    public void UpdateUIInventory() {
-        int count = 0;
+    private void UpdateUIInventory() {
         
-        for (int i = 0; i < inventoryImages.Count; i++) {
+        //TODO add functionality do show the quantity of each object using Dictionary dic_inventoryQtd and System.Linq
+        
+        int count = 0;
+        SOobject oneObject;
 
-            if (count < inventory.Count) {
-                inventoryImages[i].sprite = inventory[count].sprite;
+        //for each button on the inventory canvas
+        for (int i = 0; i < inventoryUI.Count; i++) {
+
+            if (count < _dicInv.Count) {
+
+                oneObject = _dicInv.Keys.ElementAt(i);
+                
+                inventoryUI[i].SetInventoryButtonUI(oneObject.sprite,_dicInv[oneObject]);
+                
                 count++;
             } else {
-                inventoryImages[i].sprite = null;
+                inventoryUI[i].SetInventoryButtonUI(null,0);
             }
         }
     }
-
-
-
-
+    
 
 
 }
