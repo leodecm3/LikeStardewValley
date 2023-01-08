@@ -84,7 +84,11 @@ public class GameManager : MonoBehaviour {
         
         return true;
     }
-
+    
+    
+    public void DressClothe(SOclothes s) {
+        _player.DressClothe(s.sprite);
+    }
     
 
     private void UpdateUIInventory() {
@@ -112,9 +116,7 @@ public class GameManager : MonoBehaviour {
     }
 
 
-    private void DressClothe(SOclothes s) {
-        _player.DressClothe(s.sprite);
-    }
+
     
 
 

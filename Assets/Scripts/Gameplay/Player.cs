@@ -25,8 +25,12 @@ public class Player : MonoBehaviour {
     public void OnMove(InputAction.CallbackContext context) {
         _movingDir = (Vector3)context.ReadValue<Vector2>();
         _rigidbody.velocity = _movingDir*velocity;
-        _faceDirection = _movingDir;
-        //Debug.Log(m_movingDir*velocity);
+
+        //record the last face direction
+        if (_movingDir.magnitude > 0) {
+            _faceDirection = _movingDir;
+        }
+
     }
     
     public void OnInteract(InputAction.CallbackContext context) {
@@ -34,12 +38,15 @@ public class Player : MonoBehaviour {
         if (context.started) {
 
             //_movingDir = _movingDir.normalized;//direction is normalized by the raycast, this line is redundant 
-            RaycastHit2D hit = Physics2D.CircleCast(this.transform.position, 2f, _movingDir,2f);
+            RaycastHit2D hit = Physics2D.CircleCast(this.transform.position, 1f, _faceDirection,1f);
             
             if (hit.transform.TryGetComponent(out InteractableObject interactableObject)) {
                 interactableObject.InteractWithThis();
             }
+            
+            Debug.DrawRay(this.transform.position, _faceDirection.normalized * 1f, Color.green, 1000);
 
+            Debug.Log("started");
         }
 
     }

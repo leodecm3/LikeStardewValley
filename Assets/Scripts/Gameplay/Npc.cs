@@ -9,6 +9,8 @@ public class Npc : InteractableObject {
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
     [SerializeField] private GameObject npcCanvas;
 
+    private bool _isInsideVisionCone = false;
+
     private void Start() {
         //just in case i forget...
         npcCanvas.SetActive(false);
@@ -32,11 +34,13 @@ public class Npc : InteractableObject {
             case TriggerEnum.Enter:
                 interactionLabel.SetActive(true);
                 cinemachineVirtualCamera.Priority = 11;
+                _isInsideVisionCone = true;
                 break;
             case TriggerEnum.Exit:
                 interactionLabel.SetActive(false);
                 npcCanvas.SetActive(false);
                 cinemachineVirtualCamera.Priority = 0;
+                _isInsideVisionCone = false;
                 break;
             }
         }
@@ -46,10 +50,10 @@ public class Npc : InteractableObject {
     
     //Class common to any  InteractableObject
     public override void InteractWithThis() {
-        
-        interactionLabel.SetActive(false);
-        npcCanvas.SetActive(true);
-        
+        if (_isInsideVisionCone) {
+            interactionLabel.SetActive(false);
+            npcCanvas.SetActive(true);
+        }
         
     }
 }
