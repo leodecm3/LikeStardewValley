@@ -1375,6 +1375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442140587513613409425db265b49d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clothesVisual: {fileID: 1616606969}
   velocity: 5
 --- !u!4 &184920121
 Transform:

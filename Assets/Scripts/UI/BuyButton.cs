@@ -21,22 +21,31 @@ public class BuyButton : MonoBehaviour {
     }
 
     private void OnEnable() {
-        UpdateUI();
+        //subscribe to update when player use money
+        _gm.OnUpdateUI += UpdateUI;
+        
+        //update first time when open
+        UpdateUI(this, EventArgs.Empty);
     }
+    private void OnDisable() {
+        _gm.OnUpdateUI -= UpdateUI;
+    }
+    
 
-    private void UpdateUI() {
+    private void UpdateUI(object sender, EventArgs e) {
         price.SetText("$"+ totalPrice + " = " + qtd + "x");
         image.sprite = so.sprite;
         
         //put the X case there is not enough money
         xNotEnoughMoney.SetActive(_gm.GetPlayersMoney() < totalPrice);
-
     }
 
 
     public void OnBuyThis() {
 
         if (_gm.BuySomething(so,totalPrice,qtd) == false) {
+            
+            xNotEnoughMoney.SetActive(true);
             
             //case cant buy, i do an simple animation using dotween
             xNotEnoughMoney.transform.localScale = new Vector2(2f, 2f);
@@ -45,7 +54,6 @@ public class BuyButton : MonoBehaviour {
             
         }
         
-        UpdateUI();
     }
     
 

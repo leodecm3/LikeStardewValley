@@ -39,8 +39,7 @@ public class Player : MonoBehaviour {
             if (hit.transform.TryGetComponent(out InteractableObject interactableObject)) {
                 interactableObject.InteractWithThis();
             }
-            
-            Debug.Log("started ");
+
         }
 
     }

@@ -3,7 +3,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 
 
 [DefaultExecutionOrder(-1)]
@@ -16,11 +16,13 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Dictionary<SOobject,int> _dicInv= new Dictionary<SOobject,int>();
     
     
-    
     [SerializeField] private float playersMoney;
     public float GetPlayersMoney() =>  playersMoney;
     
     private Player _player;
+    
+    
+    public event EventHandler OnUpdateUI;
     
     
     //SINGLETON... use like this:   _gm = GameManager.Instance;
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour {
     //right click on the class to test
     [ContextMenu("Test Buy Something function")]
     public void TestAddMoney() {
-        BuySomething(new SOobject(), 10f, 5);
+        BuySomething(ScriptableObject.CreateInstance<SOobject>(), 10f, 5);
     }
 
 
@@ -77,6 +79,9 @@ public class GameManager : MonoBehaviour {
         //UI
         UpdateUIInventory();
         
+        //tell the buttons on the screen to update the value
+        OnUpdateUI?.Invoke(this, EventArgs.Empty);
+        
         return true;
     }
 
@@ -96,11 +101,12 @@ public class GameManager : MonoBehaviour {
 
                 oneObject = _dicInv.Keys.ElementAt(i);
                 
-                inventoryUI[i].SetInventoryButtonUI(oneObject.sprite,_dicInv[oneObject]);
+                inventoryUI[i].SetInventoryButtonUI(oneObject,_dicInv[oneObject]);
                 
                 count++;
             } else {
-                inventoryUI[i].SetInventoryButtonUI(null,0);
+                //empty
+                inventoryUI[i].SetInventoryButtonUI();
             }
         }
     }

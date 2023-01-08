@@ -8,17 +8,40 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class InventoryButton : MonoBehaviour {
 
-    private Image _image;
+    
+    //this may be called on start, so i prefer populate the value internaly
+    private Image ThisImage{
+        get {
+            if (_ThisImage == null) {
+                _ThisImage = this.GetComponent<Image>();
+            }
+            return _ThisImage;
+        }  
+        set { _ThisImage = value; } 
+    }
+    private Image _ThisImage;
+    
     [SerializeField] private GameObject qtdBG;
     [SerializeField] private TextMeshProUGUI qtdUI;
 
-    private void Awake() {
-        _image = this.GetComponent<Image>();
-        qtdBG.SetActive(false);
-    }
-    
+    private SOobject _oobject;
 
-    public void SetInventoryButtonUI(Sprite s, int qtd) {
+
+    private void Start() {
+        
+        qtdBG.SetActive(false);
+        this.GetComponent<Button>().onClick.AddListener(OnClickInventoryButton);
+    }
+
+
+    public void SetInventoryButtonUI() {
+        //empty
+        qtdBG.SetActive(false);
+        ThisImage.sprite = null;
+    }
+    public void SetInventoryButtonUI(SOobject o, int qtd) {
+
+        _oobject = o;
         
         if (qtd > 0) {
             qtdBG.SetActive(true);
@@ -27,9 +50,15 @@ public class InventoryButton : MonoBehaviour {
             qtdBG.SetActive(false);
         }
 
-        _image.sprite = s;
+        ThisImage.sprite = _oobject.sprite;
 
     }
+
+
+    private void OnClickInventoryButton() {
+        
+    }
+    
 
 }
 
