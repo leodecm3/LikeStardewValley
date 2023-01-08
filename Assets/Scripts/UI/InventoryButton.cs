@@ -57,6 +57,12 @@ public class InventoryButton : MonoBehaviour {
 
     private void OnClickInventoryButton() {
         
+        //case implement Clothes class interface, i dress the clothes
+        if (_oobject is SOclothes) {
+            GameManager.Instance.DressClothe((SOclothes)_oobject);
+        }
+        //TODO else to plant a tree
+        
     }
     
 
