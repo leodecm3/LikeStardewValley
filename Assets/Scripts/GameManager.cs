@@ -20,7 +20,12 @@ public class GameManager : MonoBehaviour {
     public float GetPlayersMoney() =>  playersMoney;
     
     private Player _player;
+    public Player Get_player() => _player;
     
+    private Npc _npcNear;
+    public void Set_NpcNear(Npc n) => _npcNear = n;
+    
+    private SOclothes _wearingClothes;
     
     public event EventHandler OnUpdateUI;
     
@@ -39,6 +44,8 @@ public class GameManager : MonoBehaviour {
         UpdateUIInventory();
     }
 
+    
+#region PublicFunctions
 
 
     public float AddPlayersMoney(float amount) {
@@ -87,10 +94,38 @@ public class GameManager : MonoBehaviour {
     
     
     public void DressClothe(SOclothes s) {
+        _wearingClothes = s;
         _player.DressClothe(s.sprite);
     }
-    
 
+
+    public void OnClickInventoryButton(SOobject soobject) {
+        
+        //case implement Clothes class interface, i dress the clothes
+        if (soobject is SOclothes) {
+            DressClothe((SOclothes)soobject);
+            return;
+        }
+
+        if (_npcNear != null) {
+            //sell the thing to the shop
+            
+            return;
+        }
+        
+        //Else will use the item in the world
+        //todo
+        
+    }
+    
+    
+    
+#endregion PublicFunctions
+
+
+#region PrivateAuxFunctions
+    
+    
     private void UpdateUIInventory() {
         
         //TODO add functionality do show the quantity of each object using Dictionary dic_inventoryQtd and System.Linq
@@ -116,7 +151,7 @@ public class GameManager : MonoBehaviour {
     }
 
 
-
+#endregion
     
 
 

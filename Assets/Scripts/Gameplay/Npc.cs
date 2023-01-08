@@ -41,6 +41,10 @@ public class Npc : InteractableObject {
                 npcCanvas.SetActive(false);
                 cinemachineVirtualCamera.Priority = 0;
                 _isInsideVisionCone = false;
+                
+                //tell the player this NPC is with the canvas not active
+                GameManager.Instance.Set_NpcNear(null);
+                
                 break;
             }
         }
@@ -49,11 +53,17 @@ public class Npc : InteractableObject {
     
     
     //Class common to any  InteractableObject
-    public override void InteractWithThis() {
+    public override bool InteractWithThis() {
         if (_isInsideVisionCone) {
             interactionLabel.SetActive(false);
             npcCanvas.SetActive(true);
+
+            //tell the player this NPC is with the canvas active
+            GameManager.Instance.Set_NpcNear(this);
+
+            return true;
         }
+        return false;
         
     }
 }

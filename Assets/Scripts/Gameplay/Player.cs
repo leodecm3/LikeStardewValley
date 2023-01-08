@@ -14,8 +14,6 @@ public class Player : MonoBehaviour {
     private Vector2 _faceDirection;
     
     
-
-
     private void Start() {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -55,6 +53,7 @@ public class Player : MonoBehaviour {
     public void DressClothe(Sprite s) {
         clothesVisual.sprite = s;
     }
+
 
 
 
