@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6245c4970a414131b3f421ef4623b23b, type: 3}
-  m_Name: clothes1
+  m_Script: {fileID: 11500000, guid: 09a30d81cfb818b4896a95eeb74d332f, type: 3}
+  m_Name: crop3
   m_EditorClassIdentifier: 
   baseBuyPrice: 0
   baseSellPrice: 0
-  sprite: {fileID: -1257406074, guid: 57da58ea443f96145970c097b3bdc87b, type: 3}
+  sprite: {fileID: 1677055191, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
+  timeToGrow: 0
+  timerNow: 0
+  growingSprite:
+  - {fileID: 1677055191, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}

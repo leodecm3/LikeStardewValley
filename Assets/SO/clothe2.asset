@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6245c4970a414131b3f421ef4623b23b, type: 3}
   m_Name: clothe2
   m_EditorClassIdentifier: 
-  buyPrice: 0
-  sellPrice: 0
-  sprite: {fileID: 0}
+  baseBuyPrice: 0
+  baseSellPrice: 0
+  sprite: {fileID: -569149360, guid: 57da58ea443f96145970c097b3bdc87b, type: 3}

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6245c4970a414131b3f421ef4623b23b, type: 3}
-  m_Name: clothes1
+  m_Name: clothe4
   m_EditorClassIdentifier: 
   baseBuyPrice: 0
   baseSellPrice: 0
-  sprite: {fileID: -1257406074, guid: 57da58ea443f96145970c097b3bdc87b, type: 3}
+  sprite: {fileID: 1707051073, guid: 57da58ea443f96145970c097b3bdc87b, type: 3}
