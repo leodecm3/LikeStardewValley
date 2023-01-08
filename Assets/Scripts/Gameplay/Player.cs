@@ -10,8 +10,7 @@ public class Player : MonoBehaviour {
     [SerializeField][Range(1f,20f)] private float velocity = 5f;
     private Vector3 _movingDir;
     private Rigidbody2D _rigidbody;
-
-    private Vector2 _faceDirection;
+    private Vector3 _faceDirection;
     
     
     private void Start() {
@@ -47,6 +46,10 @@ public class Player : MonoBehaviour {
             Debug.Log("started");
         }
 
+    }
+
+    public Vector3 PositionInFrontOfThePalyer() {
+        return this.transform.position + _faceDirection.normalized * 1f;
     }
 
 

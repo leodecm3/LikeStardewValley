@@ -38502,6 +38502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92fd1d8190b59e44b9b25bfc3d38b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabCrops: {fileID: 3770653967143068369, guid: bf17fd8014cbddf459dadab01c3ed35b, type: 3}
   moneyUI: {fileID: 1453922543}
   inventoryUI:
   - {fileID: 1590832273}

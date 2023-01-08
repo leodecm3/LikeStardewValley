@@ -8,6 +8,8 @@ using System;
 
 [DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour {
+
+    [SerializeField] private GameObject prefabCrops;
     
     [SerializeField] private TextMeshProUGUI moneyUI;
     [SerializeField] private List<InventoryButton> inventoryUI= new List<InventoryButton>();
@@ -40,20 +42,14 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Start() {
-        moneyUI.SetText(playersMoney.ToString("0") + " Coins");
+        //add zero money just to update the UI
+        AddPlayersMoney(0);
         UpdateUIInventory();
     }
 
     
 #region PublicFunctions
 
-
-    public float AddPlayersMoney(float amount) {
-        playersMoney += amount;
-        moneyUI.SetText(playersMoney.ToString("0") + " Coins");
-        return playersMoney;
-    }
-    
 
     //right click on the class to test
     [ContextMenu("Test Buy Something function")]
@@ -109,13 +105,15 @@ public class GameManager : MonoBehaviour {
 
         if (_npcNear != null) {
             //sell the thing to the shop
-            
+            AddPlayersMoney(soobject.baseSellPrice);
+            _dicInv[soobject]--;
+            UpdateUIInventory();
             return;
         }
         
         //Else will use the item in the world
-        //todo
-        
+        Instantiate(prefabCrops, _player.PositionInFrontOfThePalyer(), Quaternion.identity);
+
     }
     
     
@@ -125,6 +123,11 @@ public class GameManager : MonoBehaviour {
 
 #region PrivateAuxFunctions
     
+
+    private void AddPlayersMoney(float amount) {
+        playersMoney += amount;
+        moneyUI.SetText(playersMoney.ToString("0") + " Coins");
+    }
     
     private void UpdateUIInventory() {
         
