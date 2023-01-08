@@ -6,11 +6,13 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour {
     
+    [SerializeField] private SpriteRenderer clothesVisual;
     [SerializeField][Range(1f,20f)] private float velocity = 5f;
     private Vector3 _movingDir;
     private Rigidbody2D _rigidbody;
 
     private Vector2 _faceDirection;
+    
     
 
 
@@ -30,7 +32,6 @@ public class Player : MonoBehaviour {
     public void OnInteract(InputAction.CallbackContext context) {
         
         if (context.started) {
-            
 
             //_movingDir = _movingDir.normalized;//direction is normalized by the raycast, this line is redundant 
             RaycastHit2D hit = Physics2D.CircleCast(this.transform.position, 2f, _movingDir,2f);
@@ -38,12 +39,15 @@ public class Player : MonoBehaviour {
             if (hit.transform.TryGetComponent(out InteractableObject interactableObject)) {
                 interactableObject.InteractWithThis();
             }
-
-                
             
             Debug.Log("started ");
         }
 
+    }
+
+
+    public void DressClothe(Sprite s) {
+        clothesVisual.sprite = s;
     }
 
 

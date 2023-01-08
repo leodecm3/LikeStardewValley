@@ -46,14 +46,16 @@ public class GameManager : MonoBehaviour {
     }
     
 
-    [ContextMenu("TestAddMoney function")]
+    //right click on the class to test
+    [ContextMenu("Test Buy Something function")]
     public void TestAddMoney() {
-        playersMoney += 10f;
+        BuySomething(new SOobject(), 10f, 5);
     }
 
 
     public bool BuySomething(SOobject sOobject, float price, int qtd) {
-        Debug.Log("BuySomething");
+        
+        //case no money, just return false
         if (price > playersMoney) {
             return false;
         }
@@ -64,9 +66,17 @@ public class GameManager : MonoBehaviour {
         }
         _dicInv[sOobject] = _dicInv[sOobject] + qtd;
         
+        //money
         AddPlayersMoney(-price);
         
+        //case implement Clothes class interface, i dress the clothes
+        if (sOobject is SOclothes) {
+            DressClothe((SOclothes)sOobject);
+        }
+        
+        //UI
         UpdateUIInventory();
+        
         return true;
     }
 
@@ -93,6 +103,11 @@ public class GameManager : MonoBehaviour {
                 inventoryUI[i].SetInventoryButtonUI(null,0);
             }
         }
+    }
+
+
+    private void DressClothe(SOclothes s) {
+        _player.DressClothe(s.sprite);
     }
     
 
