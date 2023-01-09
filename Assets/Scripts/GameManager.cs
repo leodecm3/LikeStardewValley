@@ -81,10 +81,7 @@ public class GameManager : MonoBehaviour {
         
         //UI
         UpdateUIInventory();
-        
-        //tell the buttons on the screen to update the value
-        OnUpdateUI?.Invoke(this, EventArgs.Empty);
-        
+
         return true;
     }
     
@@ -107,13 +104,22 @@ public class GameManager : MonoBehaviour {
             //sell the thing to the shop
             AddPlayersMoney(soobject.baseSellPrice);
             _dicInv[soobject]--;
+            if (_dicInv[soobject] == 0) {
+                _dicInv.Remove(soobject);
+            }
             UpdateUIInventory();
             return;
         }
         
         //Else will use the item in the world
-        Instantiate(prefabCrops, _player.PositionInFrontOfThePalyer(), Quaternion.identity);
-
+        GameObject go = Instantiate(prefabCrops, _player.PositionInFrontOfThePalyer(), Quaternion.identity);
+        go.GetComponent<WorldCropObject>().InitiateThis((SOcrops)soobject);
+        _dicInv[soobject]--;
+        if (_dicInv[soobject] == 0) {
+            _dicInv.Remove(soobject);
+        }
+        UpdateUIInventory();
+        
     }
     
     
@@ -131,11 +137,13 @@ public class GameManager : MonoBehaviour {
     
     private void UpdateUIInventory() {
         
-        //TODO add functionality do show the quantity of each object using Dictionary dic_inventoryQtd and System.Linq
+        //tell the buttons on the screen to update the value
+        OnUpdateUI?.Invoke(this, EventArgs.Empty);
         
+        
+        //TODO add functionality do show the quantity of each object using Dictionary dic_inventoryQtd and System.Linq
         int count = 0;
         SOobject oneObject;
-
         //for each button on the inventory canvas
         for (int i = 0; i < inventoryUI.Count; i++) {
 
