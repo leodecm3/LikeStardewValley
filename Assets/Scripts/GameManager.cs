@@ -9,6 +9,8 @@ using System;
 [DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour {
 
+    
+
     [SerializeField] private GameObject prefabCrops;
     
     [SerializeField] private TextMeshProUGUI moneyUI;
@@ -26,6 +28,9 @@ public class GameManager : MonoBehaviour {
     
     private Npc _npcNear;
     public void Set_NpcNear(Npc n) => _npcNear = n;
+    
+    [SerializeField] private TooltipInventory tooltip;
+    public TooltipInventory Get_tooltip() => tooltip;
     
     private SOclothes _wearingClothes;
     
