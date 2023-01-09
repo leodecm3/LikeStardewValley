@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a30d81cfb818b4896a95eeb74d332f, type: 3}
   m_Name: crops2
   m_EditorClassIdentifier: 
-  baseBuyPrice: 0
-  baseSellPrice: 0
+  baseBuyPrice: 1
+  baseSellPrice: 2
   sprite: {fileID: -1718289496, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
-  timeToGrow: 0
-  timerNow: 0
+  timeToGrow: 9
   growingSprite:
   - {fileID: -1137531307, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
-  - {fileID: -1718289496, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
+  - {fileID: -195445015, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
+  - {fileID: -1205569251, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
+  - {fileID: -97579581, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}

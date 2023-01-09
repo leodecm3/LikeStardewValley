@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 11278380}
   - component: {fileID: 11278382}
   - component: {fileID: 11278381}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 19723172}
   - component: {fileID: 19723174}
   - component: {fileID: 19723173}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 78633037}
   - component: {fileID: 78633039}
   - component: {fileID: 78633038}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 135546041}
   - component: {fileID: 135546043}
   - component: {fileID: 135546042}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1050,7 +1050,7 @@ GameObject:
   - component: {fileID: 176491413}
   - component: {fileID: 176491412}
   - component: {fileID: 176491411}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1203,7 +1203,7 @@ GameObject:
   - component: {fileID: 181302559}
   - component: {fileID: 181302561}
   - component: {fileID: 181302560}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1536,7 +1536,7 @@ GameObject:
   - component: {fileID: 196151121}
   - component: {fileID: 196151123}
   - component: {fileID: 196151122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: E button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1722,7 +1722,7 @@ GameObject:
   - component: {fileID: 309927240}
   - component: {fileID: 309927242}
   - component: {fileID: 309927241}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1857,7 +1857,7 @@ GameObject:
   - component: {fileID: 325125680}
   - component: {fileID: 325125682}
   - component: {fileID: 325125681}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2008,7 +2008,7 @@ GameObject:
   - component: {fileID: 363589321}
   - component: {fileID: 363589320}
   - component: {fileID: 363589319}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2375,7 +2375,7 @@ GameObject:
   - component: {fileID: 412097199}
   - component: {fileID: 412097198}
   - component: {fileID: 412097197}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2527,7 +2527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417225826}
   - component: {fileID: 417225827}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2612,7 +2612,7 @@ GameObject:
   - component: {fileID: 424613617}
   - component: {fileID: 424613619}
   - component: {fileID: 424613618}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2899,7 +2899,7 @@ GameObject:
   - component: {fileID: 501225676}
   - component: {fileID: 501225678}
   - component: {fileID: 501225677}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3187,7 +3187,7 @@ GameObject:
   - component: {fileID: 526254546}
   - component: {fileID: 526254547}
   - component: {fileID: 526254548}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: coneVision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3263,7 +3263,7 @@ GameObject:
   - component: {fileID: 531800463}
   - component: {fileID: 531800462}
   - component: {fileID: 531800461}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3699,7 +3699,7 @@ GameObject:
   - component: {fileID: 586504418}
   - component: {fileID: 586504420}
   - component: {fileID: 586504419}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3775,7 +3775,7 @@ GameObject:
   - component: {fileID: 586597855}
   - component: {fileID: 586597857}
   - component: {fileID: 586597856}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3851,7 +3851,7 @@ GameObject:
   - component: {fileID: 596852198}
   - component: {fileID: 596852200}
   - component: {fileID: 596852199}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4308,7 +4308,7 @@ GameObject:
   - component: {fileID: 669759548}
   - component: {fileID: 669759550}
   - component: {fileID: 669759549}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4522,7 +4522,7 @@ GameObject:
   - component: {fileID: 682966617}
   - component: {fileID: 682966616}
   - component: {fileID: 682966615}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4675,7 +4675,7 @@ GameObject:
   - component: {fileID: 714029499}
   - component: {fileID: 714029501}
   - component: {fileID: 714029500}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32318,7 +32318,7 @@ GameObject:
   - component: {fileID: 752926038}
   - component: {fileID: 752926040}
   - component: {fileID: 752926039}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32394,7 +32394,7 @@ GameObject:
   - component: {fileID: 834929108}
   - component: {fileID: 834929110}
   - component: {fileID: 834929109}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32472,7 +32472,7 @@ GameObject:
   - component: {fileID: 844245766}
   - component: {fileID: 844245765}
   - component: {fileID: 844245764}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32625,7 +32625,7 @@ GameObject:
   - component: {fileID: 849557571}
   - component: {fileID: 849557573}
   - component: {fileID: 849557572}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32759,7 +32759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 854949724}
   - component: {fileID: 854949725}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NPC camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32934,7 +32934,7 @@ GameObject:
   - component: {fileID: 1019313001}
   - component: {fileID: 1019313004}
   - component: {fileID: 1019313005}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33025,7 +33025,7 @@ GameObject:
   - component: {fileID: 1139556091}
   - component: {fileID: 1139556093}
   - component: {fileID: 1139556092}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33160,7 +33160,7 @@ GameObject:
   - component: {fileID: 1143753318}
   - component: {fileID: 1143753320}
   - component: {fileID: 1143753319}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33387,7 +33387,7 @@ GameObject:
   - component: {fileID: 1215630669}
   - component: {fileID: 1215630668}
   - component: {fileID: 1215630667}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33617,7 +33617,7 @@ GameObject:
   - component: {fileID: 1256107659}
   - component: {fileID: 1256107661}
   - component: {fileID: 1256107660}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34208,7 +34208,7 @@ GameObject:
   - component: {fileID: 1331600577}
   - component: {fileID: 1331600579}
   - component: {fileID: 1331600578}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34343,7 +34343,7 @@ GameObject:
   - component: {fileID: 1381999517}
   - component: {fileID: 1381999519}
   - component: {fileID: 1381999518}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34615,7 +34615,7 @@ GameObject:
   - component: {fileID: 1423058955}
   - component: {fileID: 1423058957}
   - component: {fileID: 1423058956}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34885,7 +34885,7 @@ GameObject:
   - component: {fileID: 1456820360}
   - component: {fileID: 1456820362}
   - component: {fileID: 1456820361}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35022,7 +35022,7 @@ GameObject:
   - component: {fileID: 1472269579}
   - component: {fileID: 1472269578}
   - component: {fileID: 1472269577}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35391,7 +35391,7 @@ GameObject:
   - component: {fileID: 1583769062}
   - component: {fileID: 1583769061}
   - component: {fileID: 1583769060}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35681,7 +35681,7 @@ GameObject:
   - component: {fileID: 1602882851}
   - component: {fileID: 1602882853}
   - component: {fileID: 1602882852}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35818,7 +35818,7 @@ GameObject:
   - component: {fileID: 1608156176}
   - component: {fileID: 1608156175}
   - component: {fileID: 1608156174}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36055,7 +36055,7 @@ GameObject:
   - component: {fileID: 1651941036}
   - component: {fileID: 1651941038}
   - component: {fileID: 1651941037}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36130,7 +36130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689361901}
   - component: {fileID: 1689361902}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36175,7 +36175,7 @@ GameObject:
   - component: {fileID: 1692286157}
   - component: {fileID: 1692286159}
   - component: {fileID: 1692286158}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36386,7 +36386,7 @@ GameObject:
   - component: {fileID: 1727749821}
   - component: {fileID: 1727749823}
   - component: {fileID: 1727749822}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36462,7 +36462,7 @@ GameObject:
   - component: {fileID: 1738615795}
   - component: {fileID: 1738615797}
   - component: {fileID: 1738615796}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36834,7 +36834,7 @@ GameObject:
   - component: {fileID: 1762055584}
   - component: {fileID: 1762055586}
   - component: {fileID: 1762055585}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36971,7 +36971,7 @@ GameObject:
   - component: {fileID: 1769445100}
   - component: {fileID: 1769445099}
   - component: {fileID: 1769445098}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37124,7 +37124,7 @@ GameObject:
   - component: {fileID: 1783427412}
   - component: {fileID: 1783427414}
   - component: {fileID: 1783427413}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37259,7 +37259,7 @@ GameObject:
   - component: {fileID: 1830747542}
   - component: {fileID: 1830747544}
   - component: {fileID: 1830747543}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37363,7 +37363,7 @@ GameObject:
   - component: {fileID: 1888669494}
   - component: {fileID: 1888669496}
   - component: {fileID: 1888669495}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37575,7 +37575,7 @@ GameObject:
   - component: {fileID: 1936467242}
   - component: {fileID: 1936467244}
   - component: {fileID: 1936467243}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37651,7 +37651,7 @@ GameObject:
   - component: {fileID: 1945005952}
   - component: {fileID: 1945005954}
   - component: {fileID: 1945005953}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Seller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37856,7 +37856,7 @@ GameObject:
   - component: {fileID: 2024609569}
   - component: {fileID: 2024609571}
   - component: {fileID: 2024609570}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xNotEnoughMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37993,7 +37993,7 @@ GameObject:
   - component: {fileID: 2031482328}
   - component: {fileID: 2031482327}
   - component: {fileID: 2031482326}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Button (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38229,7 +38229,7 @@ GameObject:
   - component: {fileID: 2071766680}
   - component: {fileID: 2071766682}
   - component: {fileID: 2071766681}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38306,7 +38306,7 @@ GameObject:
   - component: {fileID: 2080542531}
   - component: {fileID: 2080542530}
   - component: {fileID: 2080542529}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38791,7 +38791,7 @@ GameObject:
   - component: {fileID: 2135815279}
   - component: {fileID: 2135815281}
   - component: {fileID: 2135815280}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
