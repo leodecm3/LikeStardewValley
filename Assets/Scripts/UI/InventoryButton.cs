@@ -28,11 +28,13 @@ public class InventoryButton : MonoBehaviour {
 
 
     private void Start() {
-        
         qtdBG.SetActive(false);
         this.GetComponent<Button>().onClick.AddListener(OnClickInventoryButton);
     }
 
+    private void OnDestroy() {
+        this.GetComponent<Button>().onClick.RemoveListener(OnClickInventoryButton);
+    }
 
     public void SetInventoryButtonUI() {
         //empty
@@ -56,7 +58,10 @@ public class InventoryButton : MonoBehaviour {
 
 
     private void OnClickInventoryButton() {
-
+        if (_oobject == null) {
+            return;
+        }
+        
         GameManager.Instance.OnClickInventoryButton(_oobject);
 
     }
