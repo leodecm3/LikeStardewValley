@@ -34,16 +34,19 @@ public class Player : MonoBehaviour {
         
         if (context.started) {
 
-            //_movingDir = _movingDir.normalized;//direction is normalized by the raycast, this line is redundant 
-            RaycastHit2D hit = Physics2D.CircleCast(this.transform.position, 1f, _faceDirection,1f);
-            
+            RaycastHit2D hit = Physics2D.Raycast(this.transform.position, _faceDirection, 2f,1 << 3);
+
+            //check if hit something
+            if (hit == false) {
+                return;
+            }
+                
             if (hit.transform.TryGetComponent(out InteractableObject interactableObject)) {
                 interactableObject.InteractWithThis();
             }
             
-            Debug.DrawRay(this.transform.position, _faceDirection.normalized * 1f, Color.green, 1000);
-
-            Debug.Log("started");
+            Debug.DrawRay(this.transform.position, _faceDirection.normalized * 2f, Color.green, 100);
+            Debug.Log("OnInteract, Hit = " + hit.transform.name);
         }
 
     }
