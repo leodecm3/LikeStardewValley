@@ -116,6 +116,13 @@ public class GameManager : MonoBehaviour {
             return;
         }
         
+        //check if there is room to spawn an item
+        RaycastHit2D hit = Physics2D.Raycast(_player.transform.position, _player.FaceDirection, 2f,1 << 3);
+        if (hit == true) {
+            return;
+        }
+        
+        
         //Else will use the item in the world
         GameObject go = Instantiate(prefabCrops, _player.PositionInFrontOfThePalyer(), Quaternion.identity);
         go.GetComponent<WorldCropObject>().InitiateThis((SOcrops)soobject);

@@ -6,17 +6,20 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour {
     
+    [HideInInspector]
+    public Vector3 FaceDirection  { get; private set; }
+    
     [SerializeField] private SpriteRenderer clothesVisual;
     [SerializeField][Range(1f,20f)] private float velocity = 5f;
     private Vector3 _movingDir;
     private Rigidbody2D _rigidbody;
-    private Vector3 _faceDirection;
+    
+    
     
     
     private void Start() {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
-
     
 
     public void OnMove(InputAction.CallbackContext context) {
@@ -25,7 +28,7 @@ public class Player : MonoBehaviour {
 
         //record the last face direction
         if (_movingDir.magnitude > 0) {
-            _faceDirection = _movingDir;
+            FaceDirection = _movingDir;
         }
 
     }
@@ -34,7 +37,7 @@ public class Player : MonoBehaviour {
         
         if (context.started) {
 
-            RaycastHit2D hit = Physics2D.Raycast(this.transform.position, _faceDirection, 2f,1 << 3);
+            RaycastHit2D hit = Physics2D.Raycast(this.transform.position, FaceDirection, 2f,1 << 3);
 
             //check if hit something
             if (hit == false) {
@@ -45,14 +48,14 @@ public class Player : MonoBehaviour {
                 interactableObject.InteractWithThis();
             }
             
-            Debug.DrawRay(this.transform.position, _faceDirection.normalized * 2f, Color.green, 100);
+            Debug.DrawRay(this.transform.position, FaceDirection.normalized * 2f, Color.green, 100);
             Debug.Log("OnInteract, Hit = " + hit.transform.name);
         }
 
     }
 
     public Vector3 PositionInFrontOfThePalyer() {
-        return this.transform.position + _faceDirection.normalized * 1f;
+        return this.transform.position + FaceDirection.normalized * 1f;
     }
 
 
