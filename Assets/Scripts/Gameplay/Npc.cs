@@ -16,15 +16,11 @@ public class Npc : InteractableObject {
         npcCanvas.SetActive(false);
     }
 
-    void OnEnable()
-    {
+    void OnEnable() => 
         visionCone.onTriggerEvent.AddListener(VisionConeColliderTrigger);
-    }
- 
-    void OnDisable()
-    {
+    void OnDisable()=> 
         visionCone.onTriggerEvent.RemoveListener(VisionConeColliderTrigger);
-    }
+    
     
 
 
@@ -53,17 +49,15 @@ public class Npc : InteractableObject {
     
     
     //Class common to any  InteractableObject
-    public override bool InteractWithThis() {
+    public override void InteractWithThis() {
+        
         if (_isInsideVisionCone) {
             interactionLabel.SetActive(false);
             npcCanvas.SetActive(true);
 
             //tell the player this NPC is with the canvas active
             GameManager.Instance.Set_NpcNear(this);
-
-            return true;
         }
-        return false;
         
     }
 }
