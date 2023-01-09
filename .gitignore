@@ -79,4 +79,4 @@ crashlytics-build.properties
 
 .DS_Store
 **.DS_Store
-/Assets/ThirdPartyAssets
+# /Assets/ThirdPartyAssets
