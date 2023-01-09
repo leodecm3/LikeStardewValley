@@ -7,6 +7,7 @@ public class WorldCropObject : InteractableObject {
     [SerializeField] private TriggerEvents visionCone;
     
     [SerializeField] private SpriteRenderer progressBar;
+    [SerializeField] private GameObject pickUpFeedBack;
     
     private SpriteRenderer spriteRenderer;
     
@@ -38,7 +39,9 @@ public class WorldCropObject : InteractableObject {
             Debug.Log(posInt + " and " + _socrops.GetGrowingSprite().Length+ "  == " + timeTotal + "/" + timeToFishish + " = " + timeTotal/timeToFishish);
             
             spriteRenderer.sprite = _socrops.GetGrowingSprite()[posInt];
-
+            
+        } else {
+            pickUpFeedBack.SetActive(true);
         }
     }
     

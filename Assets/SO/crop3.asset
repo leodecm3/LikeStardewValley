@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a30d81cfb818b4896a95eeb74d332f, type: 3}
   m_Name: crop3
   m_EditorClassIdentifier: 
-  baseBuyPrice: 1
+  baseBuyPrice: 5
   baseSellPrice: 10
   sprite: {fileID: 1677055191, guid: c1e39c5066e978d409a79c439de7b0bd, type: 3}
   timeToGrow: 6
